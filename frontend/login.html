@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>Login | CampusConnect AI</title>
+
+  <link rel="stylesheet" href="css/auth.css">
+
+</head>
+
+<body>
+
+  <div class="container">
+
+    <form id="loginForm" class="form-box">
+
+      <h1>CampusConnect AI</h1>
+
+      <p>Welcome Back 👋</p>
+
+      <input 
+        type="email"
+        placeholder="Enter Email"
+        required
+      >
+
+      <input
+        type="password"
+        placeholder="Enter Password"
+        required
+      >
+
+      <select required>
+
+        <option value="">Select Role</option>
+
+        <option value="student">
+          Student
+          
+        </option>
+
+        <option value="organizer">
+          Organizer
+        </option>
+
+        <option value="stall">
+          Food Stall
+        </option>
+
+      </select>
+
+      <button type="submit">
+        Login
+      </button>
+
+      <div class="bottom-text">
+        Don't have account?
+        <a href="signup.html">
+          Signup
+        </a>
+      </div>
+
+    </form>
+
+  </div>
+
+  <script src="js/auth.js"></script>
+
+</body>
+
+</html>

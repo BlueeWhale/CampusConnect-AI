@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>
+    Student Profile
+  </title>
+
+  <link
+    rel="stylesheet"
+    href="css/dashboard1.css"
+  >
+
+</head>
+
+<body>
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+
+    <h2>
+      CampusConnect AI
+    </h2>
+
+    <ul>
+
+      <li>
+        <a href="student-dashboard.html">
+          Dashboard
+        </a>
+      </li>
+
+      <li>
+        <a href="events.html">
+          Events
+        </a>
+      </li>
+
+      <li>
+        <a href="tickets.html">
+          My Tickets
+        </a>
+      </li>
+
+      <li>
+        <a href="food.html">
+          Food Orders
+        </a>
+      </li>
+
+      <li>
+        <a href="recommendations.html">
+          AI Recommendations
+        </a>
+      </li>
+
+      <li class="active">
+        <a href="profile.html">
+          Profile
+        </a>
+      </li>
+
+      <li>
+        <a
+          href="#"
+          id="logoutBtn"
+        >
+          Logout
+        </a>
+      </li>
+
+    </ul>
+
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main-content">
+
+    <!-- TOPBAR -->
+    <header class="topbar">
+
+      <h1>
+        My Profile 👨‍🎓
+      </h1>
+
+      <div class="profile-box">
+        Student
+      </div>
+
+    </header>
+
+    <!-- PROFILE SECTION -->
+    <section class="section">
+
+      <div class="profile-container">
+
+        <!-- LEFT -->
+        <div class="profile-card">
+
+          <img
+            id="profilePreview"
+            src="https://i.imgur.com/6VBx3io.png"
+            class="profile-image"
+          >
+
+          <input
+            type="file"
+            id="profileImageInput"
+            accept="image/*"
+          >
+
+          <h2 id="studentName">
+            Rishab Goyal
+          </h2>
+
+          <p>
+            B.Tech CSE Student
+          </p>
+
+        </div>
+
+        <!-- RIGHT -->
+        <div class="profile-details">
+
+          <h2>
+            Personal Information
+          </h2>
+
+          <div class="input-group">
+
+            <label>
+              Full Name
+            </label>
+
+            <input
+              type="text"
+              id="nameInput"
+              value="Rishab Goyal"
+            >
+
+          </div>
+
+          <div class="input-group">
+
+            <label>
+              Email
+            </label>
+
+            <input
+              type="email"
+              value="rishab@gmail.com"
+            >
+
+          </div>
+
+          <div class="input-group">
+
+            <label>
+              College
+            </label>
+
+            <input
+              type="text"
+              value="ABC University"
+            >
+
+          </div>
+
+          <div class="input-group">
+
+            <label>
+              Interests
+            </label>
+
+            <input
+              type="text"
+              value="AI, Coding, Events"
+            >
+
+          </div>
+
+          <button id="saveProfileBtn">
+            Save Profile 💾
+          </button>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <script>
+
+    // =========================
+    // PROFILE IMAGE PREVIEW
+    // =========================
+
+    const profileImageInput =
+    document.getElementById(
+      "profileImageInput"
+    );
+
+    const profilePreview =
+    document.getElementById(
+      "profilePreview"
+    );
+
+    profileImageInput.addEventListener(
+      "change",
+      ()=>{
+
+        const file =
+        profileImageInput.files[0];
+
+        if(file){
+
+          profilePreview.src =
+          URL.createObjectURL(file);
+
+        }
+
+      }
+    );
+
+    // =========================
+    // SAVE PROFILE
+    // =========================
+
+    const saveBtn =
+    document.getElementById(
+      "saveProfileBtn"
+    );
+
+    saveBtn.addEventListener(
+      "click",
+      ()=>{
+
+        const name =
+        document.getElementById(
+          "nameInput"
+        ).value;
+
+        localStorage.setItem(
+          "studentName",
+          name
+        );
+
+        document.getElementById(
+          "studentName"
+        ).innerText = name;
+
+        alert(
+          "Profile Saved ✅"
+        );
+
+      }
+    );
+
+    // =========================
+    // LOGOUT
+    // =========================
+
+    const logoutBtn =
+    document.getElementById(
+      "logoutBtn"
+    );
+
+    logoutBtn.addEventListener(
+      "click",
+      ()=>{
+
+        localStorage.clear();
+
+        alert(
+          "Logged Out"
+        );
+
+        window.location.href =
+        "login.html";
+
+      }
+    );
+
+  </script>
+
+</body>
+
+</html>

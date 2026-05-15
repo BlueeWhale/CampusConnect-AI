@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>
+    AI Recommendations
+  </title>
+
+  <link
+    rel="stylesheet"
+    href="css/dashboard3.css"
+  >
+
+</head>
+
+<body>
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+
+    <h2>
+      CampusConnect AI
+    </h2>
+
+    <ul>
+
+      <li>
+        <a href="student-dashboard.html">
+          Dashboard
+        </a>
+      </li>
+
+      <li>
+        <a href="events.html">
+          Events
+        </a>
+      </li>
+
+      <li>
+        <a href="qr-ticket.html">
+          My Tickets
+        </a>
+      </li>
+
+      <li>
+        <a href="food.html">
+          Food Orders
+        </a>
+      </li>
+
+      <li class="active">
+        <a href="recommendations.html">
+          AI Recommendations
+        </a>
+      </li>
+
+      <li>
+        <a href="profile.html">
+          Profile
+        </a>
+      </li>
+
+      <li>
+        <a
+          href="#"
+          id="logoutBtn"
+        >
+          Logout
+        </a>
+      </li>
+
+    </ul>
+
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main-content">
+
+    <!-- TOPBAR -->
+    <header class="topbar">
+
+      <h1>
+        AI Recommended Events 🤖
+      </h1>
+
+      <div class="profile-box">
+        Smart Suggestions
+      </div>
+
+    </header>
+
+    <!-- AI INFO -->
+    <section class="section">
+
+      <div class="ai-box">
+
+        <h2>
+          Personalized For You ✨
+        </h2>
+
+        <p>
+          Based on your interests,
+          previous events, and food orders,
+          AI recommends these events.
+        </p>
+
+      </div>
+
+    </section>
+
+    <!-- RECOMMENDED EVENTS -->
+    <section class="section">
+
+      <h2>
+        Recommended Events 🎉
+      </h2>
+
+      <div class="cards">
+
+        <!-- CARD 1 -->
+        <div class="event-card">
+
+          <img
+            src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3"
+          >
+
+          <div class="card-content">
+
+            <h3>
+              AI Workshop
+            </h3>
+
+            <p>
+              Machine Learning + ChatGPT
+            </p>
+
+            <button>
+              Join Event 🚀
+            </button>
+
+          </div>
+
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="event-card">
+
+          <img
+            src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f"
+          >
+
+          <div class="card-content">
+
+            <h3>
+              Startup Meetup
+            </h3>
+
+            <p>
+              Networking + Business Ideas
+            </p>
+
+            <button>
+              Join Event 🚀
+            </button>
+
+          </div>
+
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="event-card">
+
+          <img
+            src="https://images.unsplash.com/photo-1542751110-97427bbecf20"
+          >
+
+          <div class="card-content">
+
+            <h3>
+              Gaming Tournament
+            </h3>
+
+            <p>
+              BGMI + Valorant Competition
+            </p>
+
+            <button>
+              Join Event 🚀
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- AI INSIGHTS -->
+    <section class="section">
+
+      <h2>
+        AI Insights 📊
+      </h2>
+
+      <div class="ai-box">
+
+        <ul>
+
+          <li>
+            You mostly attend tech events 💻
+          </li>
+
+          <li>
+            Evening events match your activity 📅
+          </li>
+
+          <li>
+            Gaming + AI categories are trending 🔥
+          </li>
+
+        </ul>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <script>
+
+    // =========================
+    // LOGOUT
+    // =========================
+
+    const logoutBtn =
+    document.getElementById(
+      "logoutBtn"
+    );
+
+    logoutBtn.addEventListener(
+      "click",
+      ()=>{
+
+        localStorage.clear();
+
+        alert(
+          "Logged Out"
+        );
+
+        window.location.href =
+        "login.html";
+
+      }
+    );
+
+  </script>
+
+</body>
+
+</html>

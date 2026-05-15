@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>
+    AI Face Verification
+  </title>
+
+  <link
+    rel="stylesheet"
+    href="css/ai-entry.css"
+  >
+
+</head>
+
+
+<body>
+
+  <div class="ai-container">
+
+    <h1>
+      🤖 AI Entry Verification
+    </h1>
+
+    <!-- CAMERA -->
+    <video
+      id="video"
+      autoplay
+    ></video>
+
+    <!-- CANVAS -->
+    <canvas
+      id="canvas"
+      style="display:none;"
+    ></canvas>
+
+    <button id="captureBtn">
+      Verify Face
+    </button>
+
+    <div id="result">
+      Waiting for verification...
+    </div>
+
+  </div>
+
+  <script src="js/ai-entry.js"></script>
+
+</body>
+
+</html>

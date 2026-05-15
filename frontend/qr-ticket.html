@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>
+    QR Ticket
+  </title>
+
+  <link
+    rel="stylesheet"
+    href="css/ticket.css"
+  >
+
+</head>
+
+<body>
+
+  <div class="ticket-container">
+
+    <div class="ticket-card">
+
+      <h1>
+        CampusConnect AI
+      </h1>
+
+      <h2>
+        Tech Fest 2026
+      </h2>
+
+      <p>
+        🎫 Entry Pass
+      </p>
+
+      <!-- QR -->
+      <div class="qr-box">
+
+        <img
+          src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=CampusConnectAI"
+        >
+
+      </div>
+
+      <div class="ticket-info">
+
+        <p>
+          👨‍🎓 Student:
+          Rishab
+        </p>
+
+        <p>
+          🆔 Ticket ID:
+          #CC1026
+        </p>
+
+        <p>
+          🤖 AI Face Verification Enabled
+        </p>
+
+      </div>
+
+      <button id="downloadBtn">
+        Download Ticket
+      </button>
+
+    </div>
+
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="js/ticket.js"></script>
+</body>
+
+</html>

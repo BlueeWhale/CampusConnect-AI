@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>
+    Food Stall Dashboard
+  </title>
+
+  <link
+    rel="stylesheet"
+    href="css/dashboard.css"
+  >
+
+</head>
+
+<body>
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+
+    <h2>
+      CampusConnect AI
+    </h2>
+
+    <ul>
+
+      <li class="active">
+        Dashboard
+      </li>
+
+      <li>
+        Add Food
+      </li>
+
+      <li>
+        Orders
+      </li>
+
+      <li>
+        Menu
+      </li>
+
+      <li>
+        Revenue
+      </li>
+
+      <li>
+        Notifications
+      </li>
+
+      <li id="logoutBtn">
+        Logout
+      </li>
+
+    </ul>
+
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main-content">
+
+    <!-- TOPBAR -->
+    <header class="topbar">
+
+      <h1>
+        Food Stall Dashboard 🍔
+      </h1>
+
+      <div class="profile-box">
+        🍟 Food Stall
+      </div>
+
+    </header>
+
+    <!-- STATS -->
+    <section class="stats">
+
+      <div class="stat-card">
+
+        <h2>
+          124
+        </h2>
+
+        <p>
+          Total Orders
+        </p>
+
+      </div>
+
+      <div class="stat-card">
+
+        <h2>
+          ₹18K
+        </h2>
+
+        <p>
+          Revenue
+        </p>
+
+      </div>
+
+      <div class="stat-card">
+
+        <h2>
+          4.9⭐
+        </h2>
+
+        <p>
+          Stall Rating
+        </p>
+
+      </div>
+
+    </section>
+
+    <!-- ADD FOOD -->
+    <section class="section">
+
+      <h2>
+        Add New Food Item 🍕
+      </h2>
+
+      <div class="create-event-box">
+
+        <input
+          type="text"
+          placeholder="Food Name"
+        >
+
+        <input
+          type="number"
+          placeholder="Price"
+        >
+
+        <textarea
+          placeholder="Food Description"
+        ></textarea>
+
+        <input
+  type="file"
+  id="foodImageInput"
+  accept="image/*"
+>
+
+<!-- IMAGE PREVIEW -->
+<img
+  id="foodPreviewImage"
+  src=""
+  style="
+    width:100%;
+    max-width:250px;
+    margin-top:20px;
+    border-radius:15px;
+    display:none;
+    object-fit:cover;
+  "
+>
+
+        <button id="addFoodBtn">
+          Add Food Item
+        </button>
+
+      </div>
+
+    </section>
+
+    <!-- ACTIVE ORDERS -->
+    <section class="section" id="orders">
+
+  <h2>
+    Live Orders 🔥
+  </h2>
+
+  <div class="food-orders" id="ordersContainer">
+
+
+
+    <!-- ORDER 1 -->
+    <div class="food-card">
+
+      <h3>
+        Burger Combo
+      </h3>
+
+      <p>
+        Order ID: #1021
+      </p>
+
+      <p>
+        Status:
+        <span
+          class="status pending"
+          id="burgerStatus"
+        >
+          Pending
+        </span>
+      </p>
+
+      <div class="order-actions">
+
+        <button
+          class="prepare-btn"
+          onclick="prepareOrder('Burger Combo')"
+        >
+          Preparing 🍳
+        </button>
+
+        <button
+          class="ready-btn"
+          onclick="readyOrder('Burger Combo')"
+        >
+          Ready ✅
+        </button>
+
+      </div>
+
+    </div>
+
+   
+
+
+    <div class="food-card">
+
+      <h3>
+        Pizza Slice
+      </h3>
+
+      <p>
+        Order ID: #1022
+      </p>
+
+      <p>
+        Status:
+        <span
+          class="status ready"
+        >
+          Ready
+        </span>
+      </p>
+
+      <div class="order-actions">
+
+        <button
+          class="prepare-btn"
+          onclick="prepareOrder('Pizza Slice')"
+        >
+          Preparing 🍳
+        </button>
+
+        <button
+          class="ready-btn"
+          onclick="readyOrder('Pizza Slice')"
+        >
+          Ready ✅
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+    <!-- POPULAR ITEMS -->
+    <section class="section">
+
+      <h2>
+        Popular Items ⭐
+      </h2>
+
+      <div class="cards">
+
+        <div class="event-card">
+
+          <img
+            src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd"
+          >
+
+          <div class="card-content">
+
+            <h3>
+              Cheese Burger
+            </h3>
+
+            <p>
+              240 Orders
+            </p>
+
+          </div>
+
+        </div>
+
+        <div class="event-card">
+
+          <img
+            src="https://images.unsplash.com/photo-1513104890138-7c749659a591"
+          >
+
+          <div class="card-content">
+
+            <h3>
+              Italian Pizza
+            </h3>
+
+            <p>
+              180 Orders
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- AI ANALYTICS -->
+    <section class="section">
+
+      <h2>
+        AI Sales Insights 🤖
+      </h2>
+
+      <div class="ai-box">
+
+        <p>
+          AI predicts burger sales
+          will increase tonight.
+        </p>
+
+        <ul>
+
+          <li>
+            Suggested extra burger stock
+          </li>
+
+          <li>
+            Peak orders: 7PM - 9PM
+          </li>
+
+          <li>
+            Most ordered item:
+            Cheese Burger
+          </li>
+
+        </ul>
+
+      </div>
+              <button id="sendOrderBtn">
+  Send Live Order
+</button>
+    </section>
+
+  </main>
+
+  <script src="js/dashboard.js"></script>
+<script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
+<script src="js/realtime.js"></script>
+</body>
+
+</html>
