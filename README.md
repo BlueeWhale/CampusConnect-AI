@@ -42,6 +42,9 @@ git init
 git add .
 git commit -m "CampusConnect AI full project (frontend + backend + AI)"
 git branch -M main
+
+
+!!!!!!!!
 git remote add origin https://github.com/YOUR_USERNAME/CampusConnect-AI.git
 git push -u origin main
 
